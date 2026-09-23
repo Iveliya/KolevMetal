@@ -29,3 +29,238 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+/* ===================================
+   KOLEV METAL
+   =================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;
+    color: #1b1b1b;
+}
+
+
+/* HEADER */
+
+.site-header {
+    background: #0d0d0d;
+    border-bottom: 1px solid #292929;
+}
+
+    .site-header .navbar {
+        min-height: 86px;
+    }
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.brand-main {
+    color: #ffffff;
+}
+
+.brand-accent {
+    color: #a7a7a7;
+    margin-left: 5px;
+}
+
+
+/* MENU */
+
+.site-header .nav-link {
+    color: #bdbdbd !important;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    position: relative;
+}
+
+    .site-header .nav-link:hover {
+        color: #ffffff !important;
+    }
+
+    .site-header .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #ffffff;
+        transition: 0.3s;
+        transform: translateX(-50%);
+    }
+
+    .site-header .nav-link:hover::after {
+        width: 60%;
+    }
+
+
+/* LOGIN */
+
+.login-area .nav-link {
+    color: #ffffff !important;
+}
+
+
+/* HERO */
+
+.hero-section {
+    position: relative;
+    min-height: 650px;
+    background: linear-gradient( 90deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.72) 45%, rgba(0,0,0,0.25) 100% ), url('/images/hero-metal.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-small-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    color: #c5c5c5;
+}
+
+.hero-content h1 {
+    font-size: clamp(45px, 6vw, 80px);
+    font-weight: 800;
+    line-height: 1.05;
+    max-width: 800px;
+    letter-spacing: -2px;
+}
+
+    .hero-content h1 span {
+        display: block;
+        color: #b5b5b5;
+    }
+
+.hero-content p {
+    max-width: 650px;
+    font-size: 19px;
+    color: #d0d0d0;
+    margin-top: 25px;
+    line-height: 1.7;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-main,
+.btn-outline-custom {
+    display: inline-block;
+    padding: 15px 27px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.25s;
+}
+
+.btn-main {
+    background: #ffffff;
+    color: #111111;
+}
+
+    .btn-main:hover {
+        background: #d4d4d4;
+        color: #111111;
+    }
+
+.btn-outline-custom {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+    .btn-outline-custom:hover {
+        background: #ffffff;
+        color: #111111;
+    }
+
+
+/* HIGHLIGHTS */
+
+.company-highlights {
+    background: #111111;
+    color: white;
+    padding: 45px 0;
+}
+
+.highlight-item {
+    padding: 10px 40px;
+    border-right: 1px solid #333333;
+}
+
+    .highlight-item:last-child {
+        border-right: none;
+    }
+
+    .highlight-item h3 {
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+
+    .highlight-item p {
+        color: #999999;
+        font-size: 14px;
+        margin: 8px 0 0;
+    }
+
+
+/* FOOTER */
+
+.site-footer {
+    background: #090909;
+    color: #888888;
+    padding: 35px 0;
+}
+
+    .site-footer p {
+        color: #ffffff;
+    }
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        min-height: 550px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .highlight-item {
+        border-right: none;
+        border-bottom: 1px solid #333333;
+        padding: 25px;
+    }
+}
