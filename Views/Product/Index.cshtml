@@ -1,26 +1,27 @@
-﻿@* @page
-@model KolevMetal.Views.Product.IndexModel
-@{
-}
- *@
-@model IEnumerable<KolevMetal.ViewModels.Product.ProductIndexViewModel>
+﻿@model IEnumerable<KolevMetal.ViewModels.Product.ProductIndexViewModel>
 
 @{
     ViewData["Title"] = "Продукти";
 }
 
+
 <section class="products-section">
 
     <div class="container">
 
+        <!-- TITLE -->
         <div class="products-simple-heading reveal-up">
+
             <span class="products-heading-line"></span>
 
             <h1>ПРОДУКТИ</h1>
 
             <span class="products-heading-line"></span>
+
         </div>
 
+
+        <!-- NO PRODUCTS -->
         @if (!Model.Any())
         {
             <div class="products-empty reveal-up">
@@ -39,64 +40,118 @@
 
             </div>
         }
+
+        <!-- PRODUCTS -->
         else
         {
-            <div class="products-grid">
+        <div class="products-grid">
 
-                @foreach (var product in Model)
-                {
-                    <article class="product-card reveal-up">
+            @foreach (var product in Model)
+            {
+                <article class="product-card reveal-up">
 
-                        <a asp-controller="Product"
-                           asp-action="Details"
-                           asp-route-id="@product.Id"
-                           class="product-card-image">
 
-                            @if (!string.IsNullOrEmpty(product.ImageUrl))
-                            {
-                                <img src="@product.ImageUrl"
-                                     alt="@product.Name" />
-                            }
-                            else
-                            {
-                                <div class="product-no-image">
-                                    <span>KM</span>
-                                </div>
-                            }
+                    <!-- PRODUCT IMAGE -->
+                    <div class="product-card-image">
 
-                            <div class="product-image-overlay"></div>
+                        @if (!string.IsNullOrEmpty(product.ImageUrl))
+                        {
+                            <img src="@product.ImageUrl"
+                                 alt="@product.Name" />
+                        }
+                        else
+                        {
+                            <div class="product-no-image">
+                                <span>KM</span>
+                            </div>
+                        }
 
-                        </a>
+                        <div class="product-image-overlay"></div>
 
-                        <div class="product-card-content">
+                    </div>
 
-                            <span class="product-category">
-                                @product.CategoryName
-                            </span>
 
-                            <h3>@product.Name</h3>
+                    <!-- PRODUCT CONTENT -->
+                    <div class="product-card-content">
 
-                            @if (!string.IsNullOrEmpty(product.Description))
-                            {
-                                <p>@product.Description</p>
-                            }
 
-                            <a asp-controller="Product"
-                               asp-action="Details"
-                               asp-route-id="@product.Id"
-                               class="product-link">
+                        <!-- CATEGORY -->
+                        <span class="product-category">
+                            @product.CategoryName
+                        </span>
 
-                                РАЗГЛЕДАЙ
-                                <span>↗</span>
 
-                            </a>
+                        <!-- NAME -->
+                        <h3>
+                            @product.Name
+                        </h3>
+
+
+                        <!-- DESCRIPTION -->
+                        @if (!string.IsNullOrEmpty(product.Description))
+                        {
+                            <p class="product-description">
+                                @product.Description
+                            </p>
+                        }
+
+
+                        <!-- PRICE -->
+                        <div class="product-price">
+                            @product.Price.ToString("F2") €
+                        </div>
+
+
+                        <!-- PURCHASE -->
+                        <div class="product-purchase">
+
+
+                            <!-- QUANTITY -->
+                            <div class="product-quantity">
+
+                                <button type="button"
+                                        class="quantity-button"
+                                        onclick="decreaseQuantity(@product.Id)">
+                                    −
+                                </button>
+
+
+                                <input type="number"
+                                       id="quantity-@product.Id"
+                                       class="quantity-input"
+                                       value="1"
+                                       min="1"
+                                       readonly />
+
+
+                                <button type="button"
+                                        class="quantity-button"
+                                        onclick="increaseQuantity(@product.Id)">
+                                    +
+                                </button>
+
+                            </div>
+
+
+                            <!-- ADD TO CART -->
+                            <button type="button"
+                                    class="add-to-cart-button">
+
+                                <span>
+                                    ДОБАВИ В КОЛИЧКАТА
+                                </span>
+
+                                
+                            </button>
 
                         </div>
 
-                    </article>
-                }
+                    </div>
 
-            </div>
+                </article>
+            }
+
+        </div>
         }
 
     </div>
@@ -104,6 +159,8 @@
 </section>
 
 
+
+<!-- CUSTOM PRODUCT CTA -->
 <section class="products-cta">
 
     <div class="container">
@@ -114,19 +171,24 @@
                 НЕ НАМИРАТЕ ТОВА, КОЕТО ТЪРСИТЕ?
             </span>
 
+
             <h2>
                 ИМАТЕ СОБСТВЕНА<br />
                 <strong>ИДЕЯ ОТ МЕТАЛ?</strong>
             </h2>
+
 
             <p>
                 Изпратете ни чертеж, размери или описание
                 на Вашия проект.
             </p>
 
+
             <a href="/#contact"
                class="km-btn km-btn-primary">
+
                 ИЗПРАТИ ЗАПИТВАНЕ
+
             </a>
 
         </div>
@@ -134,4 +196,37 @@
     </div>
 
 </section>
-       
+
+
+
+<!-- QUANTITY JAVASCRIPT -->
+<script>
+
+    function increaseQuantity(productId) {
+
+        const input =
+            document.getElementById("quantity-" + productId);
+
+        const currentValue =
+            parseInt(input.value);
+
+        input.value = currentValue + 1;
+    }
+
+
+    function decreaseQuantity(productId) {
+
+        const input =
+            document.getElementById("quantity-" + productId);
+
+        const currentValue =
+            parseInt(input.value);
+
+        if (currentValue > 1) {
+
+            input.value = currentValue - 1;
+
+        }
+    }
+
+</script>
