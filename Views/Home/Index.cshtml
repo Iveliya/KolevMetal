@@ -2,35 +2,208 @@
     ViewData["Title"] = "Начало";
 }
 
-<section class="hero-section">
+<!-- HERO -->
+<section class="km-hero">
+    <div class="km-hero-overlay"></div>
 
-    <div class="hero-overlay"></div>
+    <div class="container km-hero-content">
+        <div class="km-hero-text reveal-left">
 
-    <div class="container hero-content">
+            <span class="km-eyebrow">КОЛЕВ МЕТАЛ</span>
 
-        <div class="hero-small-title">
-            КАЧЕСТВО • ПРЕЦИЗНОСТ • НАДЕЖДНОСТ
+            <h1>
+                ТЕХНОЛОГИЯ.<br />
+                МЕТАЛ.<br />
+                <span>КАЧЕСТВО.</span>
+            </h1>
+
+            <p>
+                Прецизна металообработка и индивидуални решения,
+                създадени с внимание към всеки детайл.
+            </p>
+
+            <div class="km-hero-buttons">
+                <a href="#services" class="km-btn km-btn-primary">
+                    НАШИТЕ УСЛУГИ
+                </a>
+
+                <a href="#contact" class="km-btn km-btn-outline">
+                    ИЗПРАТИ ЗАПИТВАНЕ
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a href="#about" class="km-scroll-down">
+        <span>РАЗГЛЕДАЙ</span>
+        <span class="km-scroll-arrow">↓</span>
+    </a>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="km-about">
+
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5 reveal-left">
+                <span class="km-section-number">01</span>
+                <span class="km-section-label">ЗА НАС</span>
+
+                <h2>
+                    НАД <span>20 ГОДИНИ</span><br />
+                    ОПИТ В МЕТАЛА
+                </h2>
+
+                <div class="km-orange-line"></div>
+
+                <p>
+                    „Колев Метал“ е компания с дългогодишен опит
+                    в обработката на метал и изработката на
+                    индивидуални метални решения.
+                </p>
+
+                <p>
+                    Създадена от <strong>Николай Колев</strong>,
+                    компанията се развива с една основна цел –
+                    прецизност, надеждност и качество във всеки проект.
+                </p>
+
+                <div class="km-about-stats">
+                    <div>
+                        <strong>20+</strong>
+                        <span>ГОДИНИ ОПИТ</span>
+                    </div>
+
+                    <div>
+                        <strong>3</strong>
+                        <span>ОСНОВНИ НАПРАВЛЕНИЯ</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>ВНИМАНИЕ КЪМ ДЕТАЙЛА</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 reveal-right">
+                <div class="km-about-image">
+                    <img src="~/images/KM1.png"
+                         alt="Производство - Колев Метал" />
+
+                    <div class="km-image-border"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services" class="km-services">
+
+    <div class="container">
+
+        <div class="km-section-heading reveal-up">
+            <span class="km-section-number">02</span>
+            <span class="km-section-label">КАКВО ПРАВИМ</span>
+
+            <h2>НАШИТЕ <span>УСЛУГИ</span></h2>
+
+            <p>
+                От суровия материал до готовия детайл.
+            </p>
         </div>
 
-        <h1>
-            МЕТАЛЪТ Е НАШАТА
-            <span>СИЛА.</span>
-        </h1>
 
-        <p>
-            Професионална металообработка, лазерно рязане,
-            прахово боядисване и производство на метални изделия.
-        </p>
+        <div class="row g-4 mt-4">
 
-        <div class="hero-buttons">
+            <!-- LASER -->
+            <div class="col-lg-4 reveal-up">
+                <div class="km-service-card">
 
-            <a href="#services" class="btn-main">
-                НАШИТЕ УСЛУГИ
-            </a>
+                    <img src="~/images/KM10.png"
+                         alt="Лазерно рязане" />
 
-            <a href="#contact" class="btn-outline-custom">
-                НАПРАВИ ЗАПИТВАНЕ
-            </a>
+                    <div class="km-service-overlay"></div>
+
+                    <span class="km-service-number">01</span>
+
+                    <div class="km-service-content">
+                        <h3>ЛАЗЕРНО<br />РЯЗАНЕ</h3>
+
+                        <p>
+                            Прецизно рязане на метални листове
+                            с висока точност и чист контур.
+                        </p>
+
+                        <a href="#">
+                            НАУЧИ ПОВЕЧЕ <span>→</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- METAL -->
+            <div class="col-lg-4 reveal-up">
+                <div class="km-service-card">
+
+                    <img src="~/images/KM17.png"
+                         alt="Металообработка" />
+
+                    <div class="km-service-overlay"></div>
+
+                    <span class="km-service-number">02</span>
+
+                    <div class="km-service-content">
+                        <h3>МЕТАЛО-<br />ОБРАБОТКА</h3>
+
+                        <p>
+                            Прецизна обработка и изработка
+                            на метални детайли по проект.
+                        </p>
+
+                        <a href="#">
+                            НАУЧИ ПОВЕЧЕ <span>→</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- POWDER -->
+            <div class="col-lg-4 reveal-up">
+                <div class="km-service-card">
+
+                    <img src="~/images/KM9.png"
+                         alt="Прахово боядисване" />
+
+                    <div class="km-service-overlay"></div>
+
+                    <span class="km-service-number">03</span>
+
+                    <div class="km-service-content">
+                        <h3>ПРАХОВО<br />БОЯДИСВАНЕ</h3>
+
+                        <p>
+                            Устойчиво покритие и качествен
+                            завършек на металните изделия.
+                        </p>
+
+                        <a href="#">
+                            НАУЧИ ПОВЕЧЕ <span>→</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
 
@@ -39,28 +212,158 @@
 </section>
 
 
-<section class="company-highlights">
+<!-- IDEA TO PRODUCT -->
+<section class="km-process">
 
-    <div class="container">
+    <div class="km-process-image"></div>
+    <div class="km-process-overlay"></div>
 
-        <div class="row text-center">
+    <div class="container km-process-container">
 
-            <div class="col-md-4 highlight-item">
-                <h3>ПРЕЦИЗНОСТ</h3>
-                <p>Съвременно оборудване и качествена обработка</p>
-            </div>
+        <div class="km-process-content reveal-left">
 
-            <div class="col-md-4 highlight-item">
-                <h3>КАЧЕСТВО</h3>
-                <p>Внимание към всеки детайл и всеки проект</p>
-            </div>
+            <span class="km-section-number">03</span>
+            <span class="km-section-label">НАШИЯТ ПРОЦЕС</span>
 
-            <div class="col-md-4 highlight-item">
-                <h3>НАДЕЖДНОСТ</h3>
-                <p>Коректност и професионално изпълнение</p>
+            <h2>
+                ОТ <span>ИДЕЯТА</span><br />
+                ДО ГОТОВИЯ ПРОДУКТ
+            </h2>
+
+            <div class="km-orange-line"></div>
+
+            <p>
+                Всяка идея започва с детайл.
+                Ние я превръщаме в реално метално решение.
+            </p>
+
+            <div class="km-process-steps">
+
+                <div>
+                    <strong>01</strong>
+                    <span>ИДЕЯ</span>
+                </div>
+
+                <i>→</i>
+
+                <div>
+                    <strong>02</strong>
+                    <span>ПРОЕКТ</span>
+                </div>
+
+                <i>→</i>
+
+                <div>
+                    <strong>03</strong>
+                    <span>ОБРАБОТКА</span>
+                </div>
+
+                <i>→</i>
+
+                <div>
+                    <strong>04</strong>
+                    <span>ФИНИШ</span>
+                </div>
+
+                <i>→</i>
+
+                <div>
+                    <strong>05</strong>
+                    <span>ГОТОВ ПРОДУКТ</span>
+                </div>
+
             </div>
 
         </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUALITY -->
+<section class="km-quality">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7 reveal-left">
+                <div class="km-quality-image">
+
+                    <img src="~/images/KM8.png"
+                         alt="Качество в детайлите" />
+
+                </div>
+            </div>
+
+            <div class="col-lg-5 reveal-right">
+
+                <span class="km-section-number">04</span>
+                <span class="km-section-label">НАШИЯТ ПОДХОД</span>
+
+                <h2>
+                    КАЧЕСТВО<br />
+                    <span>В ДЕТАЙЛИТЕ.</span>
+                </h2>
+
+                <div class="km-orange-line"></div>
+
+                <p>
+                    За нас добрият резултат не е само готовият продукт.
+                    Той започва с точността и завършва с вниманието
+                    към най-малкия детайл.
+                </p>
+
+                <div class="km-values">
+
+                    <div>
+                        <span>01</span>
+                        <p>ПРЕЦИЗНОСТ</p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <p>НАДЕЖДНОСТ</p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <p>КАЧЕСТВО</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section id="contact" class="km-cta">
+
+    <div class="km-cta-overlay"></div>
+
+    <div class="container km-cta-content reveal-up">
+
+        <span>ИМАТЕ ПРОЕКТ?</span>
+
+        <h2>
+            НЕКА ПРЕВЪРНЕМ<br />
+            <strong>ИДЕЯТА В МЕТАЛ.</strong>
+        </h2>
+
+        <p>
+            Свържете се с нас и ни разкажете за Вашия проект.
+        </p>
+
+        <a href="#" class="km-btn km-btn-primary">
+            ИЗПРАТИ ЗАПИТВАНЕ
+        </a>
 
     </div>
 

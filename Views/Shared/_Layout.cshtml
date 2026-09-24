@@ -15,9 +15,8 @@
 
 <body>
 
-    
-        <header class="site-header">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+    <header class="sticky-header">
+        <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
                 <div class="container">
 
                     <a class="navbar-brand" asp-controller="Home" asp-action="Index">
@@ -90,18 +89,130 @@
     </main>
 
 
-    <footer class="site-footer">
-        <div class="container text-center">
+    <footer class="km-footer">
 
-            <p class="mb-1">
-                © 2026 Колев Метал ЕООД
-            </p>
+        <div class="km-footer-glow"></div>
 
-            <small>
-                Метални конструкции • Лазерно рязане • Прахово боядисване
-            </small>
+        <div class="container">
+
+            <div class="row gy-5">
+
+                <!-- COMPANY -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="km-footer-brand">
+                        <div class="km-footer-brand-name">
+                            КОЛЕВ <span>МЕТАЛ</span>
+                        </div>
+
+                        <div class="km-footer-line"></div>
+
+                        <p class="km-footer-slogan">
+                            ОТ МЕТАЛ ДО СЪВЪРШЕНСТВО
+                        </p>
+
+                        <p class="km-footer-description">
+                            Над 20 години опит в обработката на метал.
+                            Прецизност, качество и индивидуални решения
+                            за всеки проект.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- NAVIGATION -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="km-footer-title">НАВИГАЦИЯ</h5>
+
+                    <ul class="km-footer-links">
+                        <li>
+                            <a asp-controller="Home" asp-action="Index">Начало</a>
+                        </li>
+                        <li><a href="#">За нас</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Продукти</a></li>
+                        <li><a href="#">Галерия</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- SERVICES -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="km-footer-title">УСЛУГИ</h5>
+
+                    <ul class="km-footer-links">
+                        <li><a href="#">Лазерно рязане</a></li>
+                        <li><a href="#">Металообработка</a></li>
+                        <li><a href="#">Прахово боядисване</a></li>
+                        <li><a href="#">Метални конструкции</a></li>
+                        <li><a href="#">Индивидуални решения</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- CONTACTS -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="km-footer-title">КОНТАКТИ</h5>
+
+                    <div class="km-footer-contact">
+
+                        <a href="tel:+359000000000" class="km-contact-item">
+                            <span class="km-contact-icon">↗</span>
+
+                            <span>
+                                <small>ТЕЛЕФОН</small>
+                                <strong>+359 00 000 0000</strong>
+                            </span>
+                        </a>
+
+                        <a href="mailto:office@kolevmetal.bg" class="km-contact-item">
+                            <span class="km-contact-icon">✉</span>
+
+                            <span>
+                                <small>EMAIL</small>
+                                <strong>office@kolevmetal.bg</strong>
+                            </span>
+                        </a>
+
+                        <div class="km-contact-item">
+                            <span class="km-contact-icon">⌖</span>
+
+                            <span>
+                                <small>АДРЕС</small>
+                                <strong>Казанлък, България</strong>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- BOTTOM -->
+            <div class="km-footer-bottom">
+
+                <div>
+                    © 2026 Колев Метал ЕООД
+                </div>
+
+                <div class="km-footer-bottom-slogan">
+                    ТЕХНОЛОГИЯ. МЕТАЛ. <span>КАЧЕСТВО.</span>
+                </div>
+
+                <div>
+                    Всички права запазени.
+                </div>
+
+            </div>
 
         </div>
+
+        <!-- BACKGROUND TEXT -->
+        <div class="km-footer-background-text">
+            KOLEV METAL
+        </div>
+
     </footer>
 
 
