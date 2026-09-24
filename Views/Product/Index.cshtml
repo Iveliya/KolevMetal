@@ -1,0 +1,137 @@
+﻿@* @page
+@model KolevMetal.Views.Product.IndexModel
+@{
+}
+ *@
+@model IEnumerable<KolevMetal.ViewModels.Product.ProductIndexViewModel>
+
+@{
+    ViewData["Title"] = "Продукти";
+}
+
+<section class="products-section">
+
+    <div class="container">
+
+        <div class="products-simple-heading reveal-up">
+            <span class="products-heading-line"></span>
+
+            <h1>ПРОДУКТИ</h1>
+
+            <span class="products-heading-line"></span>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="products-empty reveal-up">
+
+                <span>КОЛЕВ МЕТАЛ</span>
+
+                <h3>
+                    ПРОДУКТИТЕ<br />
+                    <strong>ПРЕДСТОЯТ.</strong>
+                </h3>
+
+                <p>
+                    Каталогът се подготвя.
+                    Скоро тук ще бъдат представени нашите продукти.
+                </p>
+
+            </div>
+        }
+        else
+        {
+            <div class="products-grid">
+
+                @foreach (var product in Model)
+                {
+                    <article class="product-card reveal-up">
+
+                        <a asp-controller="Product"
+                           asp-action="Details"
+                           asp-route-id="@product.Id"
+                           class="product-card-image">
+
+                            @if (!string.IsNullOrEmpty(product.ImageUrl))
+                            {
+                                <img src="@product.ImageUrl"
+                                     alt="@product.Name" />
+                            }
+                            else
+                            {
+                                <div class="product-no-image">
+                                    <span>KM</span>
+                                </div>
+                            }
+
+                            <div class="product-image-overlay"></div>
+
+                        </a>
+
+                        <div class="product-card-content">
+
+                            <span class="product-category">
+                                @product.CategoryName
+                            </span>
+
+                            <h3>@product.Name</h3>
+
+                            @if (!string.IsNullOrEmpty(product.Description))
+                            {
+                                <p>@product.Description</p>
+                            }
+
+                            <a asp-controller="Product"
+                               asp-action="Details"
+                               asp-route-id="@product.Id"
+                               class="product-link">
+
+                                РАЗГЛЕДАЙ
+                                <span>↗</span>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+                }
+
+            </div>
+        }
+
+    </div>
+
+</section>
+
+
+<section class="products-cta">
+
+    <div class="container">
+
+        <div class="products-cta-inner reveal-up">
+
+            <span>
+                НЕ НАМИРАТЕ ТОВА, КОЕТО ТЪРСИТЕ?
+            </span>
+
+            <h2>
+                ИМАТЕ СОБСТВЕНА<br />
+                <strong>ИДЕЯ ОТ МЕТАЛ?</strong>
+            </h2>
+
+            <p>
+                Изпратете ни чертеж, размери или описание
+                на Вашия проект.
+            </p>
+
+            <a href="/#contact"
+               class="km-btn km-btn-primary">
+                ИЗПРАТИ ЗАПИТВАНЕ
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+       
